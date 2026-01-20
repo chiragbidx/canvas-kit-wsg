@@ -117,12 +117,46 @@
         border-radius:2rem;
         box-shadow: 0 2px 24px 0 rgba(85,120,243,0.07);
       }
+      .contact-gradient {
+        background: linear-gradient(100deg, #fff 60%, #eef2ff 100%);
+        border-radius: 2.5rem;
+        box-shadow: 0 4px 48px 0 rgba(80, 87, 224, 0.07);
+      }
+      .contact-form .form-control {
+        border-radius: 1rem;
+        background: #f7f9fb;
+        border: 1px solid #e2e7f3;
+        font-weight: 500;
+      }
+      .contact-form .form-control:focus {
+        box-shadow: 0 0 0 0.2rem rgba(99,80,237,.08);
+        border-color: #6350ef;
+      }
+      .contact-label {
+        font-weight: 600;
+        color: #534da5;
+      }
+      .contact-submit {
+        border-radius: 1.5rem;
+        background: linear-gradient(100deg,#6344ed 40%,#22e1ff 100%);
+        border: none;
+        color: #fff!important;
+        font-weight: 700;
+        box-shadow: 0 4px 24px 0 rgba(40,93,255,0.11);
+        transition: background 0.15s;
+      }
+      .contact-submit:hover,
+      .contact-submit:focus {
+        background: linear-gradient(90deg,#22e1ff,#6344ed 80%);
+        color: #fff;
+      }
       footer {
         background: #fff;
       }
       @media (max-width: 768px) {
         .rounded-section,
-        .cta-gradient {
+        .cta-gradient,
+        .contact-gradient {
           border-radius: 1rem;
         }
       }
@@ -145,6 +179,7 @@
             <li class="nav-item"><a class="nav-link fw-semibold" href="#features">Features</a></li>
             <li class="nav-item"><a class="nav-link fw-semibold" href="#pricing">Pricing</a></li>
             <li class="nav-item"><a class="nav-link fw-semibold" href="#testimonials">Testimonials</a></li>
+            <li class="nav-item"><a class="nav-link fw-semibold" href="#contact">Contact</a></li>
             <li class="nav-item ms-lg-3">
               <a class="btn btn-primary px-4 fw-bold shadow-sm" href="#cta" style="border-radius:2rem;">Get Started</a>
             </li>
@@ -343,6 +378,41 @@
         </div>
       </div>
       <div class="section-divider"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-6">
+      <div class="container">
+        <div class="contact-gradient px-3 px-lg-5 py-5 mx-auto" style="max-width: 700px;">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold display-6 mb-2">Contact Us</h2>
+            <p class="lead mb-0 text-secondary">Questions? Feedback? We're here to help you succeed.</p>
+          </div>
+          <form class="contact-form" autocomplete="off" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="contactName" class="form-label contact-label">Name</label>
+                <input type="text" class="form-control" id="contactName" name="name" placeholder="Your Name" aria-label="Your Name" required>
+              </div>
+              <div class="col-md-6">
+                <label for="contactEmail" class="form-label contact-label">Email</label>
+                <input type="email" class="form-control" id="contactEmail" name="email" placeholder="you@email.com" aria-label="Your Email" required>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-12">
+                <label for="contactMessage" class="form-label contact-label">Message</label>
+                <textarea class="form-control" id="contactMessage" name="message" rows="4" placeholder="How can we help?" aria-label="Message" required></textarea>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-12 text-center">
+                <button type="submit" class="btn contact-submit btn-lg px-5 shadow-sm" aria-label="Send Message">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </section>
 
     <!-- CTA Section -->
