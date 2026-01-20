@@ -3,261 +3,365 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PandaSaaS – Modern SaaS Landing Page</title>
+    <title>PandaSaaS – Sleek SaaS Landing Page</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     >
+    <style>
+      html, body {
+        font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+        background-color: #f7f9fb;
+      }
+      .navbar-modern {
+        backdrop-filter: blur(8px);
+        background: rgba(255,255,255,0.8)!important;
+        box-shadow: 0 2px 24px 0 rgba(20,36,56,0.04);
+      }
+      .navbar-brand-modern {
+        font-size: 1.7rem;
+        letter-spacing: -2px;
+        font-weight: 800;
+        background: linear-gradient(90deg,#0563fa 0,#22e1ff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .gradient-hero {
+        background: linear-gradient(95deg,#0563fa 0,#63e 70%,#22e1ff 100%);
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+      }
+      .rounded-section {
+        border-radius: 2.5rem;
+      }
+      .feature-card {
+        border-radius: 1.5rem;
+        border: 0;
+        transition: box-shadow 0.18s cubic-bezier(.4,2,.6,1), transform 0.12s;
+        box-shadow: 0 4px 32px 0 rgba(20, 56, 56, 0.07);
+        background: #fff;
+      }
+      .feature-card:hover {
+        transform: translateY(-5px) scale(1.018);
+        box-shadow: 0 8px 32px 0 rgba(49,123,224,0.20);
+      }
+      .feature-icon-modern {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height:64px;
+        width:64px;
+        border-radius: 50%;
+        box-shadow: 0 4px 16px 0 rgba(49,99,224,0.10);
+        margin-bottom: 1.2rem;
+        font-size: 2rem;
+      }
+      .pricing-highlight {
+        border:2px solid #6344ed;
+        background: linear-gradient(120deg,#e7e6fc 60%,#fcfaff 100%);
+        box-shadow:0 4px 42px 0 rgba(99,68,237,0.12);
+        transform: scale(1.02);
+        z-index:2;
+      }
+      .pricing-card {
+        border-radius:1.5rem;
+        border: 0;
+        box-shadow: 0 2px 24px 0 rgba(110,118,140,0.07);
+        background: #fff;
+        transition: box-shadow 0.17s,transform 0.12s;
+      }
+      .pricing-card:hover {
+        transform: translateY(-2px) scale(1.01);
+        box-shadow: 0 8px 36px 0 rgba(99,68,237,0.08);
+      }
+      .avatar-ring {
+        padding: 3px;
+        background: linear-gradient(90deg,#22e1ff,#6350ef 80%);
+        border-radius: 50%;
+        display: inline-block;
+      }
+      .testimonial-quote {
+        position:relative;
+        padding-left:2.3rem;
+      }
+      .testimonial-quote::before {
+        content:'“';
+        font-size: 3rem;
+        color:#6350ef;
+        position:absolute;
+        left:0;
+        top:-1rem;
+        font-family: Georgia, serif;
+        opacity:0.17;
+      }
+      .section-divider {
+        height: 54px;
+        background: url('data:image/svg+xml;utf8,<svg width="100%" height="54" viewBox="0 0 1440 54" xmlns="http://www.w3.org/2000/svg"><path d="M0,44 C360,15 1080,85 1440,45 L1440,54 L0,54 Z" fill="%23fff"/></svg>') no-repeat bottom var(--bs-body-bg);
+        background-size: cover;
+        margin-top: -1px;
+      }
+      .cta-gradient {
+        background: linear-gradient(95deg,#048ff7 0,#6f49fd 100%);
+        color: white;
+        border-radius: 2.5rem;
+        box-shadow: 0 6px 34px 0 rgba(49,123,224,0.16);
+        position:relative;
+      }
+      .cta-gradient a.btn-light {
+        background: #fff;
+        color: #6350ef !important;
+        border-radius:2rem;
+        box-shadow: 0 2px 24px 0 rgba(85,120,243,0.07);
+      }
+      footer {
+        background: #fff;
+      }
+      @media (max-width: 768px) {
+        .rounded-section,
+        .cta-gradient {
+          border-radius: 1rem;
+        }
+      }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <nav class="navbar navbar-modern navbar-expand-lg sticky-top shadow-sm py-2">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="#">PandaSaaS</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand navbar-brand-modern d-flex align-items-center" href="#">
+          <span class="me-2" style="font-size:2rem; background:linear-gradient(90deg,#6344ed 60%,#22e1ff 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">🐼</span>
+          PandaSaaS
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavModern" aria-controls="navbarNavModern" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ms-auto">
-            <a class="nav-link active" aria-current="page" href="#features">Features</a>
-            <a class="nav-link" href="#pricing">Pricing</a>
-            <a class="nav-link" href="#testimonials">Testimonials</a>
-            <a class="nav-link btn btn-primary text-white ms-lg-3 mt-2 mt-lg-0 px-3" href="#cta">Get Started</a>
-          </div>
+        <div class="collapse navbar-collapse" id="navbarNavModern">
+          <ul class="navbar-nav ms-auto align-items-lg-center mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link fw-semibold" href="#features">Features</a></li>
+            <li class="nav-item"><a class="nav-link fw-semibold" href="#pricing">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link fw-semibold" href="#testimonials">Testimonials</a></li>
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-primary px-4 fw-bold shadow-sm" href="#cta" style="border-radius:2rem;">Get Started</a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="py-5 bg-light" id="hero">
-      <div class="container">
-        <div class="row align-items-center py-4">
-          <div class="col-lg-6">
-            <h1 class="display-4 fw-bold mb-3">Effortless SaaS for Modern Teams</h1>
-            <p class="lead mb-4">
-              Streamline your workflow and boost productivity with PandaSaaS—the intuitive, powerful platform that adapts to your business needs.
+    <section class="gradient-hero py-6 py-lg-7">
+      <div class="container position-relative py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-6 z-2">
+            <h1 class="display-2 fw-bold mb-3" style="letter-spacing: -2px;">The Future of SaaS—Now</h1>
+            <p class="lead fw-semibold mb-4" style="font-size:1.4em;">
+              PandaSaaS is a beautiful, lightning-fast platform built for ambitious teams. Effortlessly scale your operations.
             </p>
-            <form class="row g-2 mb-3" role="search" aria-label="Sign up for PandaSaaS">
-              <div class="col-8 col-sm-7 col-md-8">
-                <input type="email" class="form-control form-control-lg" placeholder="Enter your email" aria-label="Email">
+            <form class="row g-2 mb-2" role="search" aria-label="Sign up for PandaSaaS">
+              <div class="col-8 col-md-7">
+                <input type="email" class="form-control form-control-lg border-0" placeholder="Enter your email" aria-label="Email" required style="border-radius:1.5rem;">
               </div>
-              <div class="col-4 col-sm-5 col-md-4">
-                <button type="submit" class="btn btn-primary btn-lg w-100">Free Trial</button>
+              <div class="col-4 col-md-5">
+                <button type="submit" class="btn btn-light btn-lg w-100 fw-bold shadow-sm" style="border-radius:1.5rem; color:#6350ef;">Try for Free</button>
               </div>
             </form>
-            <p class="text-muted small">No credit card required.</p>
+            <p class="text-white-50 small mt-2">No credit card required. Start today.</p>
           </div>
-          <div class="col-lg-6 d-none d-lg-block text-center">
+          <div class="col-lg-6 text-center d-none d-lg-flex justify-content-end align-items-center">
             <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
-                 alt="Dashboard preview" class="img-fluid rounded-3 shadow-lg" style="max-height:340px;">
+              alt="Modern SaaS Dashboard Preview"
+              class="img-fluid rounded-4 shadow-lg"
+              style="max-height:380px; border:8px solid rgba(255,255,255,0.6)">
           </div>
         </div>
       </div>
+      <div class="section-divider"></div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-5">
-      <div class="container">
+    <section id="features" class="pt-6 pb-5">
+      <div class="container rounded-section py-5 bg-white shadow-sm" style="position:relative; margin-top:-48px; z-index:2;">
         <div class="row mb-5">
-          <div class="col-md-8 mx-auto text-center">
-            <h2 class="fw-bold">Everything You Need</h2>
-            <p class="lead">All the tools for your team to collaborate, automate, and grow—no clutter, no hassle.</p>
+          <div class="col-lg-9 mx-auto text-center">
+            <h2 class="fw-bold display-6 mb-2">
+              Built for Modern Teams
+            </h2>
+            <p class="lead text-secondary mb-0">
+              Streamline collaboration, supercharge productivity, and stay ahead with next-gen tools.
+            </p>
           </div>
         </div>
-        <div class="row g-4">
+        <div class="row g-4 align-items-stretch">
           <div class="col-md-4">
-            <div class="card border-0 h-100 shadow-sm">
-              <div class="card-body text-center">
-                <div class="mb-3">
-                  <span class="bg-primary bg-opacity-10 text-primary rounded-circle p-3">
-                    <svg width="32" height="32" fill="currentColor" aria-hidden="true"><use href="#icon1"></use></svg>
-                  </span>
-                </div>
-                <h5 class="card-title">Seamless Integration</h5>
-                <p class="card-text">Connect with your favorite tools effortlessly and keep your workflow smooth and synced.</p>
-              </div>
+            <div class="feature-card text-center p-4 h-100">
+              <span class="feature-icon-modern" style="background: linear-gradient(135deg,#488ae0 30%,#a7d9ff 100%); box-shadow: 0 4px 16px 0 rgba(49,123,224,0.09);">
+                <svg width="32" height="32" fill="none" stroke="#fff" stroke-width="2"><circle cx="16" cy="16" r="12" fill="#22e1ff"/><path d="M11 16l3 3 7-7" stroke="#fff" stroke-width="2" fill="none"/></svg>
+              </span>
+              <h5 class="fw-bold mb-2">Seamless Integration</h5>
+              <p class="text-secondary mb-0">Effortlessly connect with your favorite apps and automate your work.</p>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card border-0 h-100 shadow-sm">
-              <div class="card-body text-center">
-                <div class="mb-3">
-                  <span class="bg-success bg-opacity-10 text-success rounded-circle p-3">
-                    <svg width="32" height="32" fill="currentColor" aria-hidden="true"><use href="#icon2"></use></svg>
-                  </span>
-                </div>
-                <h5 class="card-title">Advanced Analytics</h5>
-                <p class="card-text">Gain deep insights into your business with real-time metrics and reporting dashboards.</p>
-              </div>
+            <div class="feature-card text-center p-4 h-100">
+              <span class="feature-icon-modern" style="background: linear-gradient(135deg,#a489fa 0,#37c2ff 100%);">
+                <svg width="32" height="32" fill="none" stroke="#fff" stroke-width="2"><rect x="5" y="15" width="20" height="10" rx="4" fill="#6344ed"/><rect x="9" y="7" width="14" height="7" rx="2" fill="#22e1ff"/></svg>
+              </span>
+              <h5 class="fw-bold mb-2">AI-Powered Analytics</h5>
+              <p class="text-secondary mb-0">Unlock real-time insights with beautiful, interactive dashboards.</p>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card border-0 h-100 shadow-sm">
-              <div class="card-body text-center">
-                <div class="mb-3">
-                  <span class="bg-warning bg-opacity-10 text-warning rounded-circle p-3">
-                    <svg width="32" height="32" fill="currentColor" aria-hidden="true"><use href="#icon3"></use></svg>
-                  </span>
-                </div>
-                <h5 class="card-title">24/7 Support</h5>
-                <p class="card-text">Get help whenever you need it, with expert support just a message away—day or night.</p>
-              </div>
+            <div class="feature-card text-center p-4 h-100">
+              <span class="feature-icon-modern" style="background: linear-gradient(135deg,#ffe8b3 0,#ffb347 100%);">
+                <svg width="32" height="32" fill="none" stroke="#fff" stroke-width="2"><circle cx="16" cy="16" r="12" fill="#ffb347"/><rect x="15" y="9" width="2" height="9" rx="1" fill="#fff"/><rect x="15" y="21" width="2" height="2" rx="1" fill="#fff"/></svg>
+              </span>
+              <h5 class="fw-bold mb-2">World-class Support</h5>
+              <p class="text-secondary mb-0">Get help instantly with live chat—day or night, worldwide. </p>
             </div>
           </div>
         </div>
       </div>
-      <!-- SVG Icons -->
-      <svg style="display:none;">
-        <symbol id="icon1" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#0d6efd"/><path d="M7 12l3 3 7-7" stroke="#fff" stroke-width="2" fill="none"/></symbol>
-        <symbol id="icon2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="7" rx="2" fill="#198754"/><rect x="7" y="7" width="10" height="4" rx="1" fill="#6fcd86"/></symbol>
-        <symbol id="icon3" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#ffc107"/><rect x="11" y="6" width="2" height="7" rx="1" fill="#fff"/><rect x="11" y="15" width="2" height="2" rx="1" fill="#fff"/></symbol>
-      </svg>
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing" class="py-5 bg-light">
+    <section id="pricing" class="pt-6 pb-5">
       <div class="container">
         <div class="row mb-5">
-          <div class="col-md-8 mx-auto text-center">
-            <h2 class="fw-bold">Simple, Transparent Pricing</h2>
-            <p class="lead">Choose a plan that fits your team—no hidden fees, no surprises.</p>
+          <div class="col-md-10 mx-auto text-center">
+            <h2 class="fw-bold display-6 mb-2">Pricing that Grows with You</h2>
+            <p class="lead text-secondary mb-0">No hidden costs and no overages—choose a plan, switch anytime.</p>
           </div>
         </div>
-        <div class="row g-4 align-items-end">
-          <div class="col-md-4">
-            <div class="card border-0 shadow-sm h-100">
-              <div class="card-header text-center bg-white border-0">
-                <h5 class="mb-0">Starter</h5>
+        <div class="row g-4 justify-content-center align-items-end">
+          <div class="col-sm-6 col-md-4">
+            <div class="pricing-card text-center p-4 h-100">
+              <div class="mb-2">
+                <span class="badge rounded-pill bg-primary bg-opacity-10 text-primary fw-semibold mb-2">Starter</span>
               </div>
-              <div class="card-body text-center">
-                <h2 class="fw-bold mb-0">$0</h2>
-                <div class="mb-3 text-muted">Per month</div>
-                <ul class="list-unstyled mb-4">
-                  <li>✔ 3 Projects</li>
-                  <li>✔ 2 GB Storage</li>
-                  <li>✔ Community Support</li>
-                </ul>
-                <a href="#cta" class="btn btn-outline-primary w-100">Get Started</a>
-              </div>
+              <h2 class="fw-bold mb-1" style="font-size:2.4em;">$0</h2>
+              <div class="mb-3 text-secondary">Per month</div>
+              <ul class="list-unstyled text-secondary mb-4">
+                <li>✔ 3 Projects</li>
+                <li>✔ 2 GB Storage</li>
+                <li>✔ Community Support</li>
+              </ul>
+              <a href="#cta" class="btn btn-outline-primary w-100 fw-semibold" style="border-radius:1rem;">Get Started</a>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card border-primary shadow h-100">
-              <div class="card-header text-center bg-primary text-white border-primary">
-                <h5 class="mb-0">Pro</h5>
+          <div class="col-sm-6 col-md-4 z-2">
+            <div class="pricing-card pricing-highlight text-center p-4 h-100">
+              <div class="mb-2">
+                <span class="badge rounded-pill bg-primary text-white fw-semibold mb-2 shadow-sm" style="font-size:1rem;">Pro</span>
               </div>
-              <div class="card-body text-center">
-                <h2 class="fw-bold mb-0">$29</h2>
-                <div class="mb-3 text-muted">Per month</div>
-                <ul class="list-unstyled mb-4">
-                  <li>✔ Unlimited Projects</li>
-                  <li>✔ 20 GB Storage</li>
-                  <li>✔ Email Support</li>
-                </ul>
-                <a href="#cta" class="btn btn-primary w-100">Try Pro</a>
-              </div>
+              <h2 class="fw-bold mb-1" style="font-size:2.6em;color:#6350ef;">$29</h2>
+              <div class="mb-3 text-secondary">Per month</div>
+              <ul class="list-unstyled text-secondary mb-4">
+                <li>✔ Unlimited Projects</li>
+                <li>✔ 20 GB Storage</li>
+                <li>✔ Email Support</li>
+              </ul>
+              <a href="#cta" class="btn btn-primary w-100 fw-semibold shadow-sm" style="border-radius:1rem;">Try Pro</a>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card border-0 shadow-sm h-100">
-              <div class="card-header text-center bg-white border-0">
-                <h5 class="mb-0">Enterprise</h5>
+          <div class="col-sm-6 col-md-4">
+            <div class="pricing-card text-center p-4 h-100">
+              <div class="mb-2">
+                <span class="badge rounded-pill bg-secondary bg-opacity-10 text-secondary fw-semibold mb-2">Enterprise</span>
               </div>
-              <div class="card-body text-center">
-                <h2 class="fw-bold mb-0">Custom</h2>
-                <div class="mb-3 text-muted">Let's talk</div>
-                <ul class="list-unstyled mb-4">
-                  <li>✔ Everything in Pro</li>
-                  <li>✔ Dedicated Manager</li>
-                  <li>✔ 99.9% SLA</li>
-                </ul>
-                <a href="#cta" class="btn btn-outline-secondary w-100">Contact Us</a>
-              </div>
+              <h2 class="fw-bold mb-1" style="font-size:2.3em;">Custom</h2>
+              <div class="mb-3 text-secondary">Let's talk</div>
+              <ul class="list-unstyled text-secondary mb-4">
+                <li>✔ Everything in Pro</li>
+                <li>✔ Account Manager</li>
+                <li>✔ 99.99% SLA</li>
+              </ul>
+              <a href="#cta" class="btn btn-outline-secondary w-100 fw-semibold" style="border-radius:1rem;">Contact Sales</a>
             </div>
           </div>
         </div>
       </div>
+      <div class="section-divider"></div>
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-5">
-      <div class="container">
+    <section id="testimonials" class="pt-6 pb-5">
+      <div class="container rounded-section py-5 bg-white shadow-sm">
         <div class="row mb-5">
-          <div class="col-md-8 mx-auto text-center">
-            <h2 class="fw-bold">Loved by Teams Worldwide</h2>
-            <p class="lead">Our customers achieve more every day with PandaSaaS.</p>
+          <div class="col-lg-9 mx-auto text-center">
+            <h2 class="fw-bold display-6 mb-2">What Teams Are Saying</h2>
+            <p class="lead text-secondary mb-0">Join thousands of teams moving faster with PandaSaaS.</p>
           </div>
         </div>
         <div class="row g-4">
           <div class="col-md-4">
-            <div class="card border-0 shadow-sm h-100">
-              <div class="card-body">
-                <p class="fst-italic">
-                  “PandaSaaS helped us scale our operations and made our lives so much easier. Integration was a breeze!”
-                </p>
-                <div class="d-flex align-items-center mt-4">
-                  <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Daniel, CTO of Widgetly" class="rounded-circle me-3" style="width:48px; height:48px;">
-                  <div>
-                    <strong>Daniel L.</strong><br>
-                    <span class="text-muted small">CTO, Widgetly</span>
-                  </div>
+            <div class="card border-0 shadow-sm h-100 p-4" style="border-radius:1.2rem; background:linear-gradient(120deg,#f5f8ff 80%,#e7e6fc 100%);">
+              <div class="testimonial-quote mb-4 fst-italic">
+                PandaSaaS helped us scale our operations and made our lives so much easier. Integration was a breeze!
+              </div>
+              <div class="d-flex align-items-center mt-auto">
+                <span class="avatar-ring me-3"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Daniel, CTO of Widgetly" class="rounded-circle" style="width:44px; height:44px;"></span>
+                <div>
+                  <strong>Daniel L.</strong><br>
+                  <span class="text-muted small">CTO, Widgetly</span>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card border-0 shadow-sm h-100">
-              <div class="card-body">
-                <p class="fst-italic">
-                  “Their support is fantastic and the analytics tools give us insights we've never had before.”
-                </p>
-                <div class="d-flex align-items-center mt-4">
-                  <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya, Head of Ops at FlowLogic" class="rounded-circle me-3" style="width:48px; height:48px;">
-                  <div>
-                    <strong>Priya S.</strong><br>
-                    <span class="text-muted small">Head of Ops, FlowLogic</span>
-                  </div>
+            <div class="card border-0 shadow-sm h-100 p-4" style="border-radius:1.2rem; background:linear-gradient(120deg,#e7e6fc 80%,#faffff 100%);">
+              <div class="testimonial-quote mb-4 fst-italic">
+                Their support is fantastic and the analytics tools gave us insights we've never had before.
+              </div>
+              <div class="d-flex align-items-center mt-auto">
+                <span class="avatar-ring me-3"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya, Head of Ops at FlowLogic" class="rounded-circle" style="width:44px; height:44px;"></span>
+                <div>
+                  <strong>Priya S.</strong><br>
+                  <span class="text-muted small">Head of Ops, FlowLogic</span>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card border-0 shadow-sm h-100">
-              <div class="card-body">
-                <p class="fst-italic">
-                  “We onboarded our whole team in a day. The UI is so intuitive, and it just works the way we want.”
-                </p>
-                <div class="d-flex align-items-center mt-4">
-                  <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Alex, Founder of AcmeTech" class="rounded-circle me-3" style="width:48px; height:48px;">
-                  <div>
-                    <strong>Alex T.</strong><br>
-                    <span class="text-muted small">Founder, AcmeTech</span>
-                  </div>
+            <div class="card border-0 shadow-sm h-100 p-4" style="border-radius:1.2rem; background:linear-gradient(120deg,#faffff 90%,#f5f8ff 100%);">
+              <div class="testimonial-quote mb-4 fst-italic">
+                We onboarded our whole team in a day. The UI is so intuitive, and it just works the way we want.
+              </div>
+              <div class="d-flex align-items-center mt-auto">
+                <span class="avatar-ring me-3"><img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Alex, Founder of AcmeTech" class="rounded-circle" style="width:44px; height:44px;"></span>
+                <div>
+                  <strong>Alex T.</strong><br>
+                  <span class="text-muted small">Founder, AcmeTech</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="section-divider"></div>
     </section>
 
-    <!-- Call to Action Section -->
-    <section id="cta" class="py-5 bg-primary text-white">
-      <div class="container text-center">
-        <h2 class="fw-bold mb-4">Ready to get started?</h2>
-        <p class="lead mb-4">Start your free trial now and become part of the next generation of SaaS teams!</p>
-        <a href="#hero" class="btn btn-lg btn-light text-primary fw-bold px-5 py-2">Start Free Trial</a>
+    <!-- CTA Section -->
+    <section id="cta" class="py-6">
+      <div class="container">
+        <div class="cta-gradient text-center py-5 px-3 px-lg-5">
+          <h2 class="fw-bold display-5 mb-2">Ready to build your future?</h2>
+          <p class="lead mb-4">Try PandaSaaS risk-free—start your free trial and unlock your team's greatest potential.</p>
+          <a href="#hero" class="btn btn-light btn-lg fw-bold px-5 py-2 me-2 shadow-sm">Start Free Trial</a>
+        </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-4 bg-white border-top">
+    <footer class="py-4 border-top">
       <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
         <div class="mb-2 mb-md-0">
-          <a class="navbar-brand fw-bold" href="#">PandaSaaS</a>
-          <span class="text-muted small">© 2026 PandaSaaS Inc. All rights reserved.</span>
+          <a class="navbar-brand navbar-brand-modern fw-bold" href="#">PandaSaaS</a>
+          <span class="text-muted small">&copy; 2026 PandaSaaS Inc. All rights reserved.</span>
         </div>
         <ul class="list-inline mb-0">
           <li class="list-inline-item"><a class="text-muted" href="#">Privacy Policy</a></li>
